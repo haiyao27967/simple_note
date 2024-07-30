@@ -1,6 +1,7 @@
 package com.example.simplenote;
 
 import android.annotation.SuppressLint;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -104,12 +105,12 @@ public class NoteDetailFragment extends Fragment {
                     note.content = content;
                     if (viewModel.addNote(note)) {
                         Snackbar.make(binding.getRoot(), "Note created", Snackbar.LENGTH_SHORT)
-                                .setBackgroundTint(R.color.md_theme_inversePrimary)
+                                .setBackgroundTint(R.color.colorCustomColor1)
                                 .show();
                     }else {
                         // if fail to create file, notify user
                         Snackbar.make(binding.getRoot(), "Fail to create note", Snackbar.LENGTH_SHORT)
-                                .setBackgroundTint(R.color.md_theme_error)
+                                .setBackgroundTint(R.color.md_theme_error).setBackgroundTintMode(PorterDuff.Mode.SRC)
                                 .show();
                     }
 

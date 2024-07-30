@@ -1,5 +1,8 @@
 <resources>
     <style name="ThemeOverlay.AppTheme.MediumContrast" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+
         <item name="colorPrimary">@color/md_theme_primary_mediumContrast</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary_mediumContrast</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer_mediumContrast</item>
@@ -46,6 +49,18 @@
         <item name="colorSurfaceContainer">@color/md_theme_surfaceContainer_mediumContrast</item>
         <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh_mediumContrast</item>
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest_mediumContrast</item>
+        <item name="colorCustomColor1">@color/colorCustomColor1_mediumContrast</item>
+        <item name="colorOnCustomColor1">@color/colorOnCustomColor1_mediumContrast</item>
+        <item name="colorCustomColor1Container">@color/colorCustomColor1Container_mediumContrast</item>
+        <item name="colorOnCustomColor1Container">@color/colorOnCustomColor1Container_mediumContrast</item>
+        <item name="colorCustomColor2">@color/colorCustomColor2_mediumContrast</item>
+        <item name="colorOnCustomColor2">@color/colorOnCustomColor2_mediumContrast</item>
+        <item name="colorCustomColor2Container">@color/colorCustomColor2Container_mediumContrast</item>
+        <item name="colorOnCustomColor2Container">@color/colorOnCustomColor2Container_mediumContrast</item>
+        <item name="colorCustomColor3">@color/colorCustomColor3_mediumContrast</item>
+        <item name="colorOnCustomColor3">@color/colorOnCustomColor3_mediumContrast</item>
+        <item name="colorCustomColor3Container">@color/colorCustomColor3Container_mediumContrast</item>
+        <item name="colorOnCustomColor3Container">@color/colorOnCustomColor3Container_mediumContrast</item>
     </style>
     <style name="ThemeOverlay.AppTheme.HighContrast" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_primary_highContrast</item>
@@ -94,5 +109,17 @@
         <item name="colorSurfaceContainer">@color/md_theme_surfaceContainer_highContrast</item>
         <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh_highContrast</item>
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest_highContrast</item>
+        <item name="colorCustomColor1">@color/colorCustomColor1_highContrast</item>
+        <item name="colorOnCustomColor1">@color/colorOnCustomColor1_highContrast</item>
+        <item name="colorCustomColor1Container">@color/colorCustomColor1Container_highContrast</item>
+        <item name="colorOnCustomColor1Container">@color/colorOnCustomColor1Container_highContrast</item>
+        <item name="colorCustomColor2">@color/colorCustomColor2_highContrast</item>
+        <item name="colorOnCustomColor2">@color/colorOnCustomColor2_highContrast</item>
+        <item name="colorCustomColor2Container">@color/colorCustomColor2Container_highContrast</item>
+        <item name="colorOnCustomColor2Container">@color/colorOnCustomColor2Container_highContrast</item>
+        <item name="colorCustomColor3">@color/colorCustomColor3_highContrast</item>
+        <item name="colorOnCustomColor3">@color/colorOnCustomColor3_highContrast</item>
+        <item name="colorCustomColor3Container">@color/colorCustomColor3Container_highContrast</item>
+        <item name="colorOnCustomColor3Container">@color/colorOnCustomColor3Container_highContrast</item>
     </style>
 </resources>
