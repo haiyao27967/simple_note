@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_theme_background">
+    android:background="@color/md_theme_background"
+    android:fitsSystemWindows="false">
+
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="@dimen/appbar_height"
+        android:theme="@style/AppTheme">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/materialToolbar2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/appbar_height"
+            android:layout_height="match_parent"
             android:background="@color/md_theme_primary"
             android:minHeight="@dimen/appbar_height"
             app:menu="@menu/menu_note_detail"
@@ -23,7 +26,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
+                android:text="test"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:textColor="@color/md_theme_onSurfaceVariant" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/title_editable"
@@ -33,6 +38,7 @@
                 android:inputType="text"
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:textColor="@color/md_theme_onSurfaceVariant"
                 android:visibility="gone" />
         </com.google.android.material.appbar.MaterialToolbar>
 
@@ -42,32 +48,46 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/note_text_editable"
+        <ScrollView
             android:layout_width="0dp"
-            android:layout_height="700dp"
-            android:layout_marginStart="16dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="@dimen/appbar_height"
-            android:layout_marginEnd="16dp"
-            android:gravity="start"
-            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_marginEnd="12dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/note_text_readonly"
-            android:layout_width="0dp"
-            android:layout_height="700dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="@dimen/appbar_height"
-            android:layout_marginEnd="16dp"
-            android:gravity="start"
-            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/note_text_editable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/md_theme_background"
+                    android:fadeScrollbars="true"
+                    android:gravity="start"
+                    android:scrollbarAlwaysDrawVerticalTrack="false"
+                    android:scrollbarSize="2dp"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:verticalScrollbarPosition="right" />
+
+                <TextView
+                    android:id="@+id/note_text_readonly"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
