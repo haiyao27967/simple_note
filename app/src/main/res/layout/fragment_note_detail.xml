@@ -16,7 +16,7 @@
             android:id="@+id/materialToolbar2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/md_theme_primary"
+            android:background="@color/md_theme_primaryContainer"
             android:minHeight="@dimen/appbar_height"
             app:menu="@menu/menu_note_detail"
             app:navigationIcon="@drawable/arrow_back_24px">
@@ -26,9 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:text="test"
-                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/md_theme_onSurfaceVariant" />
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/title_editable"
@@ -38,7 +36,7 @@
                 android:inputType="text"
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                android:textColor="@color/md_theme_onSurfaceVariant"
+                android:textColor="@color/md_theme_onPrimary"
                 android:visibility="gone" />
         </com.google.android.material.appbar.MaterialToolbar>
 

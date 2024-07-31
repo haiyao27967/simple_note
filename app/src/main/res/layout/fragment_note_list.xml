@@ -14,7 +14,7 @@
             android:id="@+id/materialToolbar4"
             android:layout_width="match_parent"
             android:layout_height="@dimen/appbar_height"
-            android:background="@color/md_theme_primary"
+            android:background="@color/md_theme_primaryContainer"
             android:minHeight="@dimen/appbar_height"
             app:title="@string/home_title" />
     </com.google.android.material.appbar.AppBarLayout>
@@ -40,6 +40,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@drawable/add_24px" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
